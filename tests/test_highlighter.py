@@ -23,7 +23,7 @@ class HighlightTest(unittest.TestCase):
         """This method is called after the test routine is finished
         to clear out the data created in setUp method."""
         # TODO: add an implementation
-        self.search_texte = 0
+        self.search_text = 0
 
     def test_markup_text(self):
         """Test markup process"""

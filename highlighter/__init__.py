@@ -8,7 +8,7 @@ from flask import Flask, render_template, request, Markup
 
 
 def create_app():
-    """Create flask app for binding."""
+
     app = Flask(__name__)
 
     template_file_name = 'index.html'
@@ -36,6 +36,7 @@ def create_app():
 
         # TODO: add an implementation
 
+        result = '<mark>' + text + '</mark>'
         return result
 
     def highlight_text(text, expr):
@@ -46,6 +47,8 @@ def create_app():
         result = text
 
         # TODO: add an implementation
+
+        result = text.replace(expr, "<mark>" + expr + "</mark>")
 
         return result
 

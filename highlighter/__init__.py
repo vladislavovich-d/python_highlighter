@@ -46,8 +46,8 @@ def create_app():
         result = text
 
         # TODO: add an implementation
-        m = set(re.findall(expr, text, flags=re.IGNORECASE))
-        for i in m:
+        mc = set(re.findall(expr, text, flags=re.IGNORECASE))
+        for i in mc:
 
            result = re.sub(i, markup_text(i), result)
 

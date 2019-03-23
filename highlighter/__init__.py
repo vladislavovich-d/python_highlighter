@@ -35,8 +35,7 @@ def create_app():
         result = text
 
         # TODO: add an implementation
-
-        result = '<mark>' + text + '</mark>'
+        result = "<mark>{}</mark>".format(text)
         return result
 
     def highlight_text(text, expr):
@@ -47,8 +46,10 @@ def create_app():
         result = text
 
         # TODO: add an implementation
+        m = set(re.findall(expr, text, flags=re.IGNORECASE))
+        for i in m:
 
-        result = text.replace(expr, "<mark>" + expr + "</mark>")
+           result = re.sub(i, markup_text(i), result)
 
         return result
 
